@@ -14,6 +14,9 @@ setup multiple keys for multiple things, like for example different keys for a d
 ssh-keygen -t rsa and override the name of file, you now have multiple keys in .ssh directory.
 if you have multiple keys then run, ssh-add file-name (not pub key)
 after enabling ssh, set permit root login to no (disabled password based auth like root@ip)
+hidden folders use ls -la
+
+eval `ssh-agent -s` to allow ssh add just in case
 
    
   
