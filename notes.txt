@@ -1,0 +1,17 @@
+if a client computer wants to interact with a remote server, use secure shell(SSH)
+and then you can install web servers or do anything with the server.
+ssh is a communication protocol just like http, ftp etc
+sshd is a deamon thread running on remote server(unix enabled by default).
+2 ways:
+  password
+  public/private key
+
+after connecting you can do anything, just like doing it on a local machine.
+copies public key from local machine to remote server authorized keys file.if doing this first time, it asks for password.
+scp protocol for transferring files from local to remote server.
+
+setup multiple keys for multiple things, like for example different keys for a digital ocean server & github
+ssh-keygen -t rsa and override the name of file, you now have multiple keys in .ssh directory.
+if you have multiple keys then run, ssh-add file-name (not pub key)
+after enabling ssh, set permit root login to no (disabled password based auth like root@ip)
+  
